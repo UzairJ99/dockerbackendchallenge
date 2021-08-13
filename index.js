@@ -45,7 +45,7 @@ const authenticateToken = (req, res, next) => {
 }
 
 app.get('/', (_req, res) => {
-    res.send("hi new trigger invoked");
+    res.send("hi.");
 });
 
 app.get('/getPikachu', authenticateToken, async (_req, res) => {
