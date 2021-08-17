@@ -1,15 +1,15 @@
 steps:
   # build the container image
 - name: "gcr.io/cloud-builders/docker"
-  args: ["build", "-t", "gcr.io/solid-scheme-322816/pokemonimage:$SHORT_SHA", "."]
+  args: ["build", "-t", "gcr.io/solid-scheme-322816/dockerbackendchallenge:$SHORT_SHA", "."]
   # push container image
 - name: "gcr.io/cloud-builders/docker"
-  args: ["push", "gcr.io/solid-scheme-322816/pokemonimage:$SHORT_SHA"]
+  args: ["push", "gcr.io/solid-scheme-322816/dockerbackendchallenge:$SHORT_SHA"]
   # deploy container image to GKE
 - name: "gcr.io/cloud-builders/gke-deploy"
   args:
   - run
   - --filename=kube-config.yaml
-  - --image=gcr.io/solid-scheme-322816/pokemonimage:$SHORT_SHA
+  - --image=gcr.io/solid-scheme-322816/dockerbackendchallenge:$SHORT_SHA
   - --location=us-central1-c
   - --cluster=cluster-1
