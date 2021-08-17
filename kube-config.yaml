@@ -15,10 +15,10 @@ spec:
     metadata:
       labels:
         app: "nginx-1"
-    # spec:
-    #   containers:
-    #   - name: "dockerbackendchallenge-sha256-1"
-    #     image: "gcr.io/solid-scheme-322816/github.com/uzairj99/dockerbackendchallenge@sha256:220bc91fb845703c95bfe4d90f23e55704944ac7c773144b8eb7a384d45b93a9"
+    spec:
+      containers:
+      - name: "dockerbackendchallenge"
+        # image: "gcr.io/solid-scheme-322816/github.com/uzairj99/dockerbackendchallenge@sha256:220bc91fb845703c95bfe4d90f23e55704944ac7c773144b8eb7a384d45b93a9"
 ---
 apiVersion: "autoscaling/v2beta1"
 kind: "HorizontalPodAutoscaler"
