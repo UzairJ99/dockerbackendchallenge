@@ -45,7 +45,7 @@ const authenticateToken = (req, res, next) => {
 }
 
 app.get('/', (_req, res) => {
-    res.send("hi.");
+    res.send("Hi from GCP kubernetes engine!");
 });
 
 app.get('/getPikachu', authenticateToken, async (_req, res) => {
