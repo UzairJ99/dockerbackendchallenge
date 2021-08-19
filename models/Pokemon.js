@@ -1,10 +1,8 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+console.log("called the model");
 const pokemonSchema = Schema({
-    // _id: {
-    //     type: mongoose.Types.ObjectId
-    // },
     name: {
         type: String,
         required: true

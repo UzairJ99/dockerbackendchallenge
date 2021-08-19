@@ -8,5 +8,13 @@ Using Node.js, Docker, Google Cloud and Kubernetes, I created a simple backend s
 3. Add a RESTful database resource to that API supplementing the original (used Mongo).
 4. Add HTTP authentication to it (JWT).
 5. Deploy the app (Google Cloud build trigger and Kubernetes cluster).
-6. Load-test it
+6. Load-test it (done using K6)
 7. Build a cache strategy and show how it improves performance of the system.
+
+
+## How to Run
+visit http://34.134.162.188/ to access the application
+
+## Sample Endpoints
+/ - retrieves a list of every Pokemon in the database
+/Pokemon/:name retrieves the single queried Pokemon
