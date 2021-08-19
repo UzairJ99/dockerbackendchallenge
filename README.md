@@ -16,5 +16,9 @@ Using Node.js, Docker, Google Cloud and Kubernetes, I created a simple backend s
 visit http://34.134.162.188/ to access the application
 
 ## Sample Endpoints
+```
 / - retrieves a list of every Pokemon in the database
+```
+```
 /Pokemon/:name retrieves the single queried Pokemon
+```
