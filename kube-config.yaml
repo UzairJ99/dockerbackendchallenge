@@ -33,7 +33,7 @@ spec:
     name: "nginx-1"
     apiVersion: "apps/v1"
   minReplicas: 1
-  maxReplicas: 5
+  maxReplicas: 6
   metrics:
   - type: "Resource"
     resource:
