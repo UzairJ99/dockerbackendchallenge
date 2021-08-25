@@ -1,9 +1,11 @@
-const Pokemon = require('../models/Pokemon');
+const Pokemon = require('../models/Cache');
+let cache = new Pokemon();
 
 module.exports = class PokemonService {
+    
     static async getAllPokemon() {
         try {
-            const allPokemon = await Pokemon.find();
+            const allPokemon = cache.find();
             return allPokemon;
         } catch (err) {
             console.log(err);
@@ -11,11 +13,8 @@ module.exports = class PokemonService {
     }
 
     static async getPokemonByName(pokemonName) {
-        console.log("hi");
         try {
-            
-            console.log(pokemonName);
-            const pokemon = await Pokemon.findOne({name: pokemonName});
+            const pokemon = cache.findOne({name: pokemonName});
             return pokemon;
         } catch (err) {
             console.log(err);
